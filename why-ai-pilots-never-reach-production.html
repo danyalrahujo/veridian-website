@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Why Most Enterprise AI Pilots Never Reach Production — Veridian Insights</title>
+<meta name="description" content="The operational, not technical, reasons AI pilots stall after a promising demo — and what changes the outcome." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="../index.html" class="logo"><span class="logo-mark"></span>Veridian</a>
+    <ul class="nav-links">
+      <li><a href="../services/index.html">Services <span class="caret"></span></a>
+        <div class="mega">
+          <a href="../services/artificial-intelligence.html"><span class="mega-ic">AI</span><div><div class="mega-title">Artificial Intelligence</div><div class="mega-sub">LLMs, computer vision, NLP</div></div></a>
+          <a href="../services/machine-learning.html"><span class="mega-ic">ML</span><div><div class="mega-title">Machine Learning</div><div class="mega-sub">Predictive & prescriptive models</div></div></a>
+          <a href="../services/data-analytics.html"><span class="mega-ic">DA</span><div><div class="mega-title">Data Analytics</div><div class="mega-sub">BI & decision intelligence</div></div></a>
+          <a href="../services/data-engineering.html"><span class="mega-ic">DE</span><div><div class="mega-title">Data Engineering</div><div class="mega-sub">Pipelines & lakehouse architecture</div></div></a>
+          <a href="../services/cloud-mlops.html"><span class="mega-ic">OP</span><div><div class="mega-title">Cloud & MLOps</div><div class="mega-sub">Scalable model operations</div></div></a>
+          <a href="../services/index.html"><span class="mega-ic">CO</span><div><div class="mega-title">All Services</div><div class="mega-sub">View the full capability list</div></div></a>
+        </div>
+      </li>
+      <li><a href="../industries/index.html">Industries <span class="caret"></span></a>
+        <div class="mega">
+          <a href="../industries/healthcare.html"><span class="mega-ic">HC</span><div><div class="mega-title">Healthcare</div><div class="mega-sub">Clinical & operational AI</div></div></a>
+          <a href="../industries/finance.html"><span class="mega-ic">FS</span><div><div class="mega-title">Finance</div><div class="mega-sub">Risk, fraud, forecasting</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">RT</span><div><div class="mega-title">Retail</div><div class="mega-sub">Demand & personalization</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">MF</span><div><div class="mega-title">Manufacturing</div><div class="mega-sub">Predictive maintenance</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">LG</span><div><div class="mega-title">Logistics</div><div class="mega-sub">Network optimization</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">GV</span><div><div class="mega-title">All Industries</div><div class="mega-sub">View every sector we serve</div></div></a>
+        </div>
+      </li>
+      <li><a href="../solutions/index.html">Solutions</a></li>
+      <li><a href="../case-studies/index.html">Case Studies</a></li>
+      <li><a href="../insights/index.html">Insights</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../search.html" class="icon-btn" aria-label="Search">⌕</a>
+      <button class="icon-btn" id="darkToggle" aria-label="Toggle dark mode">◐</button>
+      <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="breadcrumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="index.html">Insights</a><span class="sep">/</span><span class="current">Enterprise AI Pilots</span></div>
+    <div class="eyebrow">Artificial Intelligence</div>
+    <h1>Why Most Enterprise AI Pilots Never Reach Production</h1>
+    <div class="blog-meta" style="margin:20px 0 40px;"><div class="author-mini"></div><span>Priya Nathan, VP Data Engineering</span><span class="dot"></span><span>March 4, 2026</span><span class="dot"></span><span>7 min read</span></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:720px;">
+    <p style="font-size:17px; color:var(--slate); margin-bottom:20px; line-height:1.7;">Almost every enterprise we talk to has run at least one AI pilot that impressed everyone in the room and then quietly disappeared. The pattern is consistent enough that it's worth naming directly: the model was rarely the problem. What stalled the project was everything around it.</p>
+    <h2 style="font-size:24px; color:var(--navy); margin:36px 0 14px;">The gap between a demo and a production system</h2>
+    <p style="font-size:16px; color:var(--slate-muted); margin-bottom:18px; line-height:1.75;">A demo needs to work once, on a curated dataset, in front of a friendly audience. A production system needs to work every time, on messy live data, under latency constraints, with a defined answer for what happens when it's wrong. Teams that treat the demo as 90% of the work consistently underestimate the remaining 10% — which is usually closer to half the total effort.</p>
+    <h2 style="font-size:24px; color:var(--navy); margin:36px 0 14px;">Three gaps that stall almost every pilot</h2>
+    <p style="font-size:16px; color:var(--slate-muted); margin-bottom:12px; line-height:1.75;">First, there's usually no evaluation harness — no systematic way to say whether a new model version is actually better than the last one, beyond someone's subjective read of a handful of examples. Second, ownership becomes unclear the moment legal, security, or compliance ask a question the pilot team can't answer. Third, monitoring is an afterthought, so nobody notices when the model's performance quietly degrades three months after launch.</p>
+    <h2 style="font-size:24px; color:var(--navy); margin:36px 0 14px;">What changes the outcome</h2>
+    <p style="font-size:16px; color:var(--slate-muted); margin-bottom:18px; line-height:1.75;">The engagements that make it to production consistently build the evaluation harness before the model, assign a named business owner before the first line of code, and treat monitoring as a launch requirement rather than a nice-to-have. None of this is exotic — it's closer to standard software engineering discipline than it is to advanced AI research. That's also why it's so often skipped: it isn't the interesting part.</p>
+    <p style="font-size:16px; color:var(--slate-muted); margin-bottom:18px; line-height:1.75;">If your organization has a pilot that's stalled, the fastest diagnostic question is rarely "is the model good enough?" It's usually "who owns this once it's live, and how would we know if it broke?" If neither has a clear answer, that's the actual blocker — not the model.</p>
+  </div>
+</section>
+<section class="section" style="background:var(--gray); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Related Articles</div><h2>Continue reading</h2></div>
+    <div class="blog-grid">
+      <a href="index.html" class="blog-card"><div class="blog-thumb"><span>Machine Learning</span></div><div class="blog-body"><h3>Model Drift: What to Monitor and When to Retrain</h3><p>A practical guide to setting retraining triggers instead of a fixed calendar.</p></div></a>
+      <a href="index.html" class="blog-card"><div class="blog-thumb"><span>Artificial Intelligence</span></div><div class="blog-body"><h3>Building an Evaluation Harness Before You Build the Model</h3><p>Why evaluation infrastructure should exist before the first model does.</p></div></a>
+      <a href="index.html" class="blog-card"><div class="blog-thumb"><span>Digital Transformation</span></div><div class="blog-body"><h3>The Operating Model Question Nobody Asks Before an AI Rollout</h3><p>Who owns a model after launch is a bigger risk than the model itself.</p></div></a>
+    </div>
+  </div>
+</section>
+<section style="padding:70px 0 100px;">
+  <div class="wrap cta-band">
+    <div><h2>Have a stalled AI pilot?</h2><p>We can help diagnose what's actually blocking production, in a single working session.</p></div>
+    <div class="cta-actions"><a href="../contact.html" class="btn btn-light">Schedule a Consultation</a></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a href="../index.html" class="logo"><span class="logo-mark"></span>Veridian</a>
+        <p style="margin-top:16px; font-size:13.5px; color:var(--slate-muted); max-width:260px;">Enterprise AI, machine learning, and data analytics consulting for organizations that run on decision intelligence.</p>
+      </div>
+      <div class="foot-col"><h5>Services</h5><ul>
+        <li><a href="../services/artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="../services/machine-learning.html">Machine Learning</a></li>
+        <li><a href="../services/data-analytics.html">Data Analytics</a></li>
+        <li><a href="../services/data-engineering.html">Data Engineering</a></li>
+        <li><a href="../services/cloud-mlops.html">Cloud & MLOps</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Industries</h5><ul>
+        <li><a href="../industries/healthcare.html">Healthcare</a></li>
+        <li><a href="../industries/finance.html">Finance</a></li>
+        <li><a href="../industries/index.html">Retail</a></li>
+        <li><a href="../industries/index.html">Manufacturing</a></li>
+        <li><a href="../industries/index.html">Government</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Company</h5><ul>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../about.html#leadership">Leadership</a></li>
+        <li><a href="../careers.html">Careers</a></li>
+        <li><a href="../insights/index.html">Insights</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Resources</h5><ul>
+        <li><a href="../case-studies/index.html">Case Studies</a></li>
+        <li><a href="../insights/index.html">Insights</a></li>
+        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+        <li><a href="../legal/terms.html">Terms of Service</a></li>
+        <li><a href="../legal/cookies.html">Cookie Policy</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Veridian Analytics, Inc. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · Cookie Policy</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.stat .num, .metric-num').forEach(el=>{
+    const raw = el.textContent.trim();
+    const match = raw.match(/[\d.]+/);
+    if(!match) return;
+    const target = parseFloat(match[0]);
+    const suffix = raw.replace(match[0], '');
+    let started = false;
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting && !started){
+          started = true;
+          let cur = 0; const step = target/40; const isInt = Number.isInteger(target);
+          const timer = setInterval(()=>{
+            cur += step;
+            if(cur >= target){ cur = target; clearInterval(timer); }
+            el.textContent = (isInt ? Math.round(cur) : cur.toFixed(1)) + suffix;
+          }, 25);
+          obs.unobserve(el);
+        }
+      });
+    }, {threshold:0.4});
+    obs.observe(el);
+  });
+
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  document.querySelectorAll('.filter-chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      chip.parentElement.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+
+  const darkToggle = document.getElementById('darkToggle');
+  darkToggle?.addEventListener('click', ()=>{
+    document.body.classList.toggle('dark-demo');
+    document.body.style.filter = document.body.classList.contains('dark-demo') ? 'invert(1) hue-rotate(180deg)' : 'none';
+  });
+</script>
+</body>
+</html>

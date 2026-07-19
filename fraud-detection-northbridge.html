@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Real-Time Fraud Detection at a National Bank — Veridian Case Study</title>
+<meta name="description" content="How a streaming anomaly-detection model cut fraud losses by 42% while reducing false positives for a national bank." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="../index.html" class="logo"><span class="logo-mark"></span>Veridian</a>
+    <ul class="nav-links">
+      <li><a href="../services/index.html">Services <span class="caret"></span></a>
+        <div class="mega">
+          <a href="../services/artificial-intelligence.html"><span class="mega-ic">AI</span><div><div class="mega-title">Artificial Intelligence</div><div class="mega-sub">LLMs, computer vision, NLP</div></div></a>
+          <a href="../services/machine-learning.html"><span class="mega-ic">ML</span><div><div class="mega-title">Machine Learning</div><div class="mega-sub">Predictive & prescriptive models</div></div></a>
+          <a href="../services/data-analytics.html"><span class="mega-ic">DA</span><div><div class="mega-title">Data Analytics</div><div class="mega-sub">BI & decision intelligence</div></div></a>
+          <a href="../services/data-engineering.html"><span class="mega-ic">DE</span><div><div class="mega-title">Data Engineering</div><div class="mega-sub">Pipelines & lakehouse architecture</div></div></a>
+          <a href="../services/cloud-mlops.html"><span class="mega-ic">OP</span><div><div class="mega-title">Cloud & MLOps</div><div class="mega-sub">Scalable model operations</div></div></a>
+          <a href="../services/index.html"><span class="mega-ic">CO</span><div><div class="mega-title">All Services</div><div class="mega-sub">View the full capability list</div></div></a>
+        </div>
+      </li>
+      <li><a href="../industries/index.html">Industries <span class="caret"></span></a>
+        <div class="mega">
+          <a href="../industries/healthcare.html"><span class="mega-ic">HC</span><div><div class="mega-title">Healthcare</div><div class="mega-sub">Clinical & operational AI</div></div></a>
+          <a href="../industries/finance.html"><span class="mega-ic">FS</span><div><div class="mega-title">Finance</div><div class="mega-sub">Risk, fraud, forecasting</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">RT</span><div><div class="mega-title">Retail</div><div class="mega-sub">Demand & personalization</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">MF</span><div><div class="mega-title">Manufacturing</div><div class="mega-sub">Predictive maintenance</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">LG</span><div><div class="mega-title">Logistics</div><div class="mega-sub">Network optimization</div></div></a>
+          <a href="../industries/index.html"><span class="mega-ic">GV</span><div><div class="mega-title">All Industries</div><div class="mega-sub">View every sector we serve</div></div></a>
+        </div>
+      </li>
+      <li><a href="../solutions/index.html">Solutions</a></li>
+      <li><a href="../case-studies/index.html">Case Studies</a></li>
+      <li><a href="../insights/index.html">Insights</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../search.html" class="icon-btn" aria-label="Search">⌕</a>
+      <button class="icon-btn" id="darkToggle" aria-label="Toggle dark mode">◐</button>
+      <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="index.html">Case Studies</a><span class="sep">/</span><span class="current">Fraud Detection</span></div>
+    <div class="eyebrow">Case Study — Finance</div>
+    <h1>Real-time fraud detection at a national bank</h1>
+    <p class="lead">A streaming anomaly-detection model reduced fraud losses by 42% while cutting the false-positive rate that had been overwhelming the manual review team.</p>
+    <div class="badge-row"><span class="tag-badge blue">Finance</span><span class="tag-badge">Fraud Detection</span><span class="tag-badge">Streaming ML</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap content-block">
+    <div>
+      <div class="eyebrow">The Challenge</div>
+      <h2>Rules-based detection couldn't keep pace</h2>
+      <p>The bank's existing fraud system relied on static rule thresholds that fraud rings routinely worked around within weeks of any update. Manual review queues had grown to the point where genuine fraud cases were taking days to catch, while false positives were frustrating legitimate customers and consuming analyst capacity.</p>
+    </div>
+    <div>
+      <div class="eyebrow">Our Approach</div>
+      <h2>A streaming model with a human-reviewed escalation tier</h2>
+      <p>We built a real-time anomaly-detection model scoring every transaction as it streamed through the payment platform, tuned against a cost-weighted objective that balanced fraud loss against false-positive review cost, with a tiered escalation path for borderline cases.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--gray); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Architecture</div><h2>How it's built</h2></div>
+    <div class="diagram-box"><div class="dg-ic">DG</div>Kafka transaction stream → feature service → real-time scoring model → tiered routing (auto-clear / auto-block / human review) → feedback loop into retraining pipeline.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Technology Stack</div><h2>What we used</h2></div>
+    <div class="tech-grid">
+      <div class="tech-card"><div class="tc-ic">KF</div><h4>Kafka</h4><p>Real-time transaction event streaming.</p></div>
+      <div class="tech-card"><div class="tc-ic">PY</div><h4>Python / XGBoost</h4><p>Core anomaly-scoring model.</p></div>
+      <div class="tech-card"><div class="tc-ic">K8</div><h4>Kubernetes</h4><p>Autoscaled real-time model serving.</p></div>
+      <div class="tech-card"><div class="tc-ic">MF</div><h4>MLflow</h4><p>Model versioning and retraining registry.</p></div>
+      <div class="tech-card"><div class="tc-ic">SF</div><h4>Snowflake</h4><p>Historical transaction data warehouse.</p></div>
+      <div class="tech-card"><div class="tc-ic">GR</div><h4>Grafana</h4><p>Live model performance monitoring.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--gray); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Implementation</div><h2>An 11-week rollout</h2></div>
+    <div class="process-list">
+      <div class="process-item"><div class="p-num">Wks 1-2</div><div><h4>Discovery &amp; baseline</h4><p>Quantified the existing false-positive rate and fraud loss baseline against which the new model would be measured.</p></div></div>
+      <div class="process-item"><div class="p-num">Wks 3-6</div><div><h4>Model development</h4><p>Built and validated the scoring model against a cost-weighted evaluation objective, not raw accuracy.</p></div></div>
+      <div class="process-item"><div class="p-num">Wks 7-9</div><div><h4>Shadow deployment</h4><p>Ran the model alongside the existing rules engine without acting on its output, to validate live performance.</p></div></div>
+      <div class="process-item"><div class="p-num">Wks 10-11</div><div><h4>Phased cutover</h4><p>Gradually shifted decisioning traffic to the new model with monitoring at each stage.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Results &amp; KPIs</div><h2>Measured business impact</h2></div>
+    <div class="stat-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="stat"><div class="num">42%</div><div class="label">Reduction in fraud losses</div></div>
+      <div class="stat"><div class="num">31%</div><div class="label">Reduction in false positives</div></div>
+      <div class="stat"><div class="num">80ms</div><div class="label">Median scoring latency</div></div>
+      <div class="stat"><div class="num">11wks</div><div class="label">Time to full production rollout</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--gray); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap" style="max-width:760px; text-align:center;">
+    <div class="eyebrow" style="justify-content:center;">Client Testimonial</div>
+    <p style="font-size:20px; font-family:var(--font-display); color:var(--navy); line-height:1.5;">"Veridian's team understood that our real constraint wasn't fraud detection accuracy alone — it was the operational cost of every false positive. That's the model they built."</p>
+    <p style="margin-top:18px; font-size:14px; color:var(--slate-muted); font-weight:600;">VP of Fraud &amp; Risk Operations, National Bank</p>
+  </div>
+</section>
+
+<section style="padding:0 0 100px;">
+  <div class="wrap cta-band">
+    <div><h2>Facing a similar fraud or risk challenge?</h2><p>We can walk through how this architecture would adapt to your transaction volume and systems.</p></div>
+    <div class="cta-actions"><a href="../contact.html" class="btn btn-light">Schedule a Consultation</a><a href="index.html" class="btn btn-outline-light">All Case Studies</a></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a href="../index.html" class="logo"><span class="logo-mark"></span>Veridian</a>
+        <p style="margin-top:16px; font-size:13.5px; color:var(--slate-muted); max-width:260px;">Enterprise AI, machine learning, and data analytics consulting for organizations that run on decision intelligence.</p>
+      </div>
+      <div class="foot-col"><h5>Services</h5><ul>
+        <li><a href="../services/artificial-intelligence.html">Artificial Intelligence</a></li>
+        <li><a href="../services/machine-learning.html">Machine Learning</a></li>
+        <li><a href="../services/data-analytics.html">Data Analytics</a></li>
+        <li><a href="../services/data-engineering.html">Data Engineering</a></li>
+        <li><a href="../services/cloud-mlops.html">Cloud & MLOps</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Industries</h5><ul>
+        <li><a href="../industries/healthcare.html">Healthcare</a></li>
+        <li><a href="../industries/finance.html">Finance</a></li>
+        <li><a href="../industries/index.html">Retail</a></li>
+        <li><a href="../industries/index.html">Manufacturing</a></li>
+        <li><a href="../industries/index.html">Government</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Company</h5><ul>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../about.html#leadership">Leadership</a></li>
+        <li><a href="../careers.html">Careers</a></li>
+        <li><a href="../insights/index.html">Insights</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Resources</h5><ul>
+        <li><a href="../case-studies/index.html">Case Studies</a></li>
+        <li><a href="../insights/index.html">Insights</a></li>
+        <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+        <li><a href="../legal/terms.html">Terms of Service</a></li>
+        <li><a href="../legal/cookies.html">Cookie Policy</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Veridian Analytics, Inc. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · Cookie Policy</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelectorAll('.stat .num, .metric-num').forEach(el=>{
+    const raw = el.textContent.trim();
+    const match = raw.match(/[\d.]+/);
+    if(!match) return;
+    const target = parseFloat(match[0]);
+    const suffix = raw.replace(match[0], '');
+    let started = false;
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting && !started){
+          started = true;
+          let cur = 0; const step = target/40; const isInt = Number.isInteger(target);
+          const timer = setInterval(()=>{
+            cur += step;
+            if(cur >= target){ cur = target; clearInterval(timer); }
+            el.textContent = (isInt ? Math.round(cur) : cur.toFixed(1)) + suffix;
+          }, 25);
+          obs.unobserve(el);
+        }
+      });
+    }, {threshold:0.4});
+    obs.observe(el);
+  });
+
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  document.querySelectorAll('.filter-chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      chip.parentElement.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+
+  const darkToggle = document.getElementById('darkToggle');
+  darkToggle?.addEventListener('click', ()=>{
+    document.body.classList.toggle('dark-demo');
+    document.body.style.filter = document.body.classList.contains('dark-demo') ? 'invert(1) hue-rotate(180deg)' : 'none';
+  });
+</script>
+</body>
+</html>
