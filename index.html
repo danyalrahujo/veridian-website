@@ -314,57 +314,6 @@
     </div>
   </div>
 </footer>
-<script>
-  const revealEls = document.querySelectorAll('[data-reveal]');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12});
-  revealEls.forEach(el=>io.observe(el));
-
-  document.querySelectorAll('.stat .num, .metric-num').forEach(el=>{
-    const raw = el.textContent.trim();
-    const match = raw.match(/[\d.]+/);
-    if(!match) return;
-    const target = parseFloat(match[0]);
-    const suffix = raw.replace(match[0], '');
-    let started = false;
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting && !started){
-          started = true;
-          let cur = 0; const step = target/40; const isInt = Number.isInteger(target);
-          const timer = setInterval(()=>{
-            cur += step;
-            if(cur >= target){ cur = target; clearInterval(timer); }
-            el.textContent = (isInt ? Math.round(cur) : cur.toFixed(1)) + suffix;
-          }, 25);
-          obs.unobserve(el);
-        }
-      });
-    }, {threshold:0.4});
-    obs.observe(el);
-  });
-
-  document.querySelectorAll('.faq-item').forEach(item=>{
-    item.querySelector('.faq-q').addEventListener('click', ()=>{
-      const isOpen = item.classList.contains('open');
-      item.parentElement.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-      if(!isOpen) item.classList.add('open');
-    });
-  });
-
-  document.querySelectorAll('.filter-chip').forEach(chip=>{
-    chip.addEventListener('click', ()=>{
-      chip.parentElement.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
-      chip.classList.add('active');
-    });
-  });
-
-  const darkToggle = document.getElementById('darkToggle');
-  darkToggle?.addEventListener('click', ()=>{
-    document.body.classList.toggle('dark-demo');
-    document.body.style.filter = document.body.classList.contains('dark-demo') ? 'invert(1) hue-rotate(180deg)' : 'none';
-  });
-</script>
+<script src="global.js"></script>
 </body>
 </html>
