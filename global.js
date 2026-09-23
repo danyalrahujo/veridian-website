@@ -248,3 +248,61 @@
     init();
   }
 })();
+
+/* ===== NEXERION HEADER NORMALIZER ===== */
+(function(){
+  function pagePrefix(){
+    return /\/(services|industries|solutions|case-studies|insights|legal)\//.test(window.location.pathname) ? '../' : '';
+  }
+  function normalizeNexHeader(){
+    var old=document.querySelector('header');
+    if(!old) return;
+    var p=pagePrefix();
+    old.className='nex-header';
+    old.innerHTML=
+      '<div class="wrap nex-header-inner">'+
+        '<a href="'+p+'index.html" class="nex-brand" aria-label="NEXERION home">'+
+          '<span class="nex-brand-mark" aria-hidden="true">N</span>'+
+          '<span class="nex-brand-word">NEXERION</span>'+
+        '</a>'+
+        '<nav class="nex-main-nav" id="nex-navigation" aria-label="Main navigation">'+
+          '<ul class="nex-nav-links">'+
+            '<li class="nex-nav-item nex-has-dropdown">'+
+              '<button class="nex-nav-trigger" type="button" aria-expanded="false" aria-controls="nex-services-menu">Services <span class="nex-caret"></span></button>'+
+              '<div class="nex-mega" id="nex-services-menu">'+
+                '<a href="'+p+'services/artificial-intelligence.html"><strong>Artificial Intelligence</strong><span>LLMs, computer vision, NLP</span></a>'+
+                '<a href="'+p+'services/machine-learning.html"><strong>Machine Learning</strong><span>Predictive &amp; prescriptive models</span></a>'+
+                '<a href="'+p+'services/data-analytics.html"><strong>Data Analytics</strong><span>BI &amp; decision intelligence</span></a>'+
+                '<a href="'+p+'services/data-engineering.html"><strong>Data Engineering</strong><span>Pipelines &amp; lakehouse architecture</span></a>'+
+                '<a href="'+p+'services/cloud-mlops.html"><strong>Cloud &amp; MLOps</strong><span>Scalable model operations</span></a>'+
+                '<a class="nex-mega-all" href="'+p+'services/index.html">View all services <span>→</span></a>'+
+              '</div>'+
+            '</li>'+
+            '<li class="nex-nav-item nex-has-dropdown">'+
+              '<button class="nex-nav-trigger" type="button" aria-expanded="false" aria-controls="nex-industries-menu">Industries <span class="nex-caret"></span></button>'+
+              '<div class="nex-mega" id="nex-industries-menu">'+
+                '<a href="'+p+'industries/healthcare.html"><strong>Healthcare</strong><span>Clinical &amp; operational AI</span></a>'+
+                '<a href="'+p+'industries/finance.html"><strong>Financial Services</strong><span>Risk, fraud, forecasting</span></a>'+
+                '<a href="'+p+'industries/index.html"><strong>Retail &amp; Consumer</strong><span>Demand &amp; personalization</span></a>'+
+                '<a href="'+p+'industries/index.html"><strong>Manufacturing</strong><span>Predictive maintenance</span></a>'+
+                '<a href="'+p+'industries/index.html"><strong>Logistics &amp; Supply Chain</strong><span>Network optimization</span></a>'+
+                '<a class="nex-mega-all" href="'+p+'industries/index.html">View all industries <span>→</span></a>'+
+              '</div>'+
+            '</li>'+
+            '<li><a href="'+p+'solutions/index.html">Solutions</a></li>'+
+            '<li><a href="'+p+'case-studies/index.html">Case Studies</a></li>'+
+            '<li><a href="'+p+'insights/index.html">Insights</a></li>'+
+            '<li><a href="'+p+'about.html">About</a></li>'+
+            '<li class="nex-mobile-cta"><a href="'+p+'contact.html" class="btn btn-primary">Schedule a Consultation</a></li>'+
+          '</ul>'+
+        '</nav>'+
+        '<div class="nex-actions">'+
+          '<a href="'+p+'search.html" class="nex-icon-btn" aria-label="Search">⌕</a>'+
+          '<button class="nex-icon-btn" id="darkToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">◐</button>'+
+          '<a href="'+p+'contact.html" class="btn btn-primary nex-desktop-cta">Schedule a Consultation</a>'+
+          '<button class="nex-mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nex-navigation"><span></span><span></span><span></span></button>'+
+        '</div>'+
+      '</div>';
+  }
+  normalizeNexHeader();
+})();
